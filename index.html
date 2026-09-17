@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NTT DATA | Workshop de Experiência</title>
+    <meta
+      name="description"
+      content="MVP de recolha de respostas para um workshop em português de Portugal."
+    />
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <script src="static/js/config.js" defer></script>
+    <script src="static/js/app.js" defer></script>
+  </head>
+  <body class="participant-page">
+    <div class="page-glow"></div>
+    <header class="topbar container">
+      <div class="brand">
+        <div class="brand-mark">NTT</div>
+        <div class="brand-meta">
+          <span class="brand-name">NTT DATA</span>
+          <small>Workshop de Experiência</small>
+        </div>
+      </div>
+      <a class="ghost-link" href="admin/">Vista do facilitador</a>
+    </header>
+
+    <main class="container shell">
+      <section class="hero-panel">
+        <div class="eyebrow">Sessão de descoberta</div>
+        <h1>Vamos construir a próxima melhor experiência juntos.</h1>
+        <p>
+          Responda em poucos minutos para partilhar contexto, desafios e prioridades da sua equipa.
+        </p>
+      </section>
+
+      <section class="card flow-card">
+        <div class="flow-header">
+          <div>
+            <div class="mini-label">Participante</div>
+            <h2>Conversação guiada</h2>
+          </div>
+          <button id="sync-banner" class="status-pill hidden" type="button"></button>
+        </div>
+
+        <div class="progress-wrap" aria-label="Progresso do formulário">
+          <div class="progress-bar">
+            <span id="progress-fill"></span>
+          </div>
+          <small id="progress-text">Pergunta 1 de 5</small>
+        </div>
+
+        <div id="step-shell" class="step-shell" aria-live="polite"></div>
+
+        <div class="actions-row">
+          <button id="back-btn" class="button secondary" type="button">Voltar</button>
+          <button id="next-btn" class="button primary" type="button">Continuar</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

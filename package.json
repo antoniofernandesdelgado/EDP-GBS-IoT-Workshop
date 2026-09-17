@@ -1,0 +1,9 @@
+{
+  "name": "ntt-data-workshop-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "python -m http.server 4173",
+    "test": "node --check static/js/config.js && node --check static/js/app.js && node --check static/js/admin.js"
+  }
+}

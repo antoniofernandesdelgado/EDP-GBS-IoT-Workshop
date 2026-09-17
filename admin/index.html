@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facilitador | NTT DATA Workshop</title>
+    <meta
+      name="description"
+      content="Vista do facilitador para consultar respostas e exportar dados do workshop."
+    />
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <script src="../static/js/config.js" defer></script>
+    <script src="../static/js/admin.js" defer></script>
+  </head>
+  <body class="admin-page">
+    <div class="page-glow"></div>
+    <header class="topbar container">
+      <div class="brand">
+        <div class="brand-mark brand-mark-alt">NTT</div>
+        <div class="brand-meta">
+          <span class="brand-name">NTT DATA</span>
+          <small>Facilitador</small>
+        </div>
+      </div>
+      <div class="admin-actions">
+        <button id="retry-all-btn" class="button secondary" type="button">Tentar sincronização</button>
+        <button id="export-btn" class="button primary" type="button">Exportar CSV</button>
+      </div>
+    </header>
+
+    <main class="container admin-shell">
+      <section class="stats-grid" id="stats-grid" aria-live="polite"></section>
+
+      <section class="card table-card">
+        <div class="table-header">
+          <div>
+            <div class="mini-label">Painel</div>
+            <h2>Respostas dos participantes</h2>
+          </div>
+          <span id="admin-status" class="status-pill status-pill-muted">A verificar dados</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Participante</th>
+                <th>Empresa</th>
+                <th>Cargo</th>
+                <th>Contexto</th>
+                <th>Estado</th>
+                <th>Última atualização</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="responses-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
