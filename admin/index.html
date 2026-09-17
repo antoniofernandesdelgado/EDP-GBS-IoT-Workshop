@@ -3,56 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Facilitador | NTT DATA Workshop</title>
-    <meta
-      name="description"
-      content="Vista do facilitador para consultar respostas e exportar dados do workshop."
-    />
+    <title>IoT Radar | NTT DATA</title>
     <link rel="stylesheet" href="../static/css/styles.css" />
     <script src="../static/js/config.js" defer></script>
     <script src="../static/js/admin.js" defer></script>
   </head>
   <body class="admin-page">
-    <div class="page-glow"></div>
+    <div class="page-grid"></div>
     <header class="topbar container">
-      <div class="brand">
-        <div class="brand-mark brand-mark-alt">NTT</div>
-        <div class="brand-meta">
-          <span class="brand-name">NTT DATA</span>
-          <small>Facilitador</small>
-        </div>
-      </div>
+      <a class="brand" href="../"><span class="brand-mark">N</span><span class="brand-meta"><strong>NTT DATA</strong><small>IoT Ideation Buddy</small></span></a>
       <div class="admin-actions">
         <button id="retry-all-btn" class="button secondary" type="button">Tentar sincronização</button>
-        <button id="export-btn" class="button primary" type="button">Exportar CSV</button>
+        <button id="export-btn" class="button primary" type="button">Exportar CSV <span aria-hidden="true">↓</span></button>
       </div>
     </header>
-
     <main class="container admin-shell">
+      <section class="admin-heading">
+        <div><div class="eyebrow">FACILITATOR VIEW · NTT DATA</div><h1>Opportunity Radar</h1><p>Veja os sinais que o grupo está a encontrar e as oportunidades IoT geradas.</p></div>
+        <span id="admin-status" class="status-pill status-pill-muted">A verificar dados</span>
+      </section>
       <section class="stats-grid" id="stats-grid" aria-live="polite"></section>
-
+      <section class="card radar-summary-card">
+        <div class="section-heading"><div><span class="mini-label">Sinais agregados</span><h2>Onde está a energia da sala?</h2></div><span class="muted">Atualizado localmente</span></div>
+        <div id="signal-summary" class="signal-summary"></div>
+      </section>
       <section class="card table-card">
-        <div class="table-header">
-          <div>
-            <div class="mini-label">Painel</div>
-            <h2>Respostas dos participantes</h2>
-          </div>
-          <span id="admin-status" class="status-pill status-pill-muted">A verificar dados</span>
-        </div>
-
+        <div class="section-heading"><div><span class="mini-label">Respostas completas</span><h2>IoT Radars dos participantes</h2></div></div>
         <div class="table-wrap">
           <table>
-            <thead>
-              <tr>
-                <th>Participante</th>
-                <th>Empresa</th>
-                <th>Cargo</th>
-                <th>Contexto</th>
-                <th>Estado</th>
-                <th>Última atualização</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
+            <thead><tr><th>Participante</th><th>Opportunity card</th><th>Capítulos</th><th>Radar</th><th>Estado</th><th>Data</th><th>Ações</th></tr></thead>
             <tbody id="responses-body"></tbody>
           </table>
         </div>

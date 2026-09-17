@@ -1,15 +1,17 @@
-# NTT DATA Workshop MVP
+# NTT DATA · IoT Ideation Buddy
 
-Aplicação estática e responsiva para recolha de respostas de participantes e vista de administrador em Portugal.
+Experiência estática e responsiva para uma conversa de ideação IoT em português de Portugal. O participante percorre sete capítulos — **YOU, YOUR WORLD, YOUR PLATFORM, ANOTHER WORLD, BREAK THE IDEA, EDP e YOUR BET** — e termina com um IoT Radar e uma Opportunity Card padronizada.
 
 ## Funcionalidades
 
-- Fluxo de conversação para participantes em português de Portugal
-- Estilo visual inspirado em NTT DATA, sem brand EDP
+- Experiência conversacional de 8–12 minutos, centrada primeiro no mundo físico
+- Seis achievement signals desbloqueáveis (01–06)
+- Opportunity Card dinâmica com sinal, pessoa, fricção, primeiro passo e ganho
+- IoT Radar final com indicadores de fricção humana, sinais, ação, energia e prontidão
+- Estilo visual NTT DATA, sem branding EDP
 - Persistência local em `localStorage`
 - Mensagens de sincronização pendente e retry local
-- Vista estática `/admin` para facilitar a revisão das respostas
-- Exportação em CSV para análise do facilitador
+- Vista estática `/admin` com sinais agregados, radars individuais e exportação CSV
 - Limite de configuração para integração opcional com Supabase em `static/js/config.js`
 
 ## Como testar localmente
@@ -18,8 +20,8 @@ Aplicação estática e responsiva para recolha de respostas de participantes e 
 2. Execute:
    - `npm start`
 3. Aceda a:
-   - `http://localhost:4173/` para a experiência do participante
-   - `http://localhost:4173/admin/` para a vista do facilitador
+   - `http://localhost:4173/` para a experiência IoT Ideation Buddy
+   - `http://localhost:4173/admin/` para a vista de resultados/facilitador
 
 ## Configuração opcional do Supabase
 
@@ -44,3 +46,4 @@ Quando `enabled` for `true`, a funcionalidade de sincronização tentará public
 
 - A aplicação é deterministicamente estática e não utiliza IA, APIs externas nem credenciais hardcoded.
 - Os dados ficam guardados no browser do utilizador em `localStorage` para um MVP simples e de fácil teste.
+- Para ver resultados no `/admin`, use o mesmo browser/perfil onde completou a conversa, porque a persistência local é por origem.

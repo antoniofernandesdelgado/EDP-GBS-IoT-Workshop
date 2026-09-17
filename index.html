@@ -3,58 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NTT DATA | Workshop de Experiência</title>
-    <meta
-      name="description"
-      content="MVP de recolha de respostas para um workshop em português de Portugal."
-    />
+    <title>IoT Ideation Buddy | NTT DATA</title>
+    <meta name="description" content="Uma conversa guiada para transformar sinais do mundo físico em oportunidades IoT." />
     <link rel="stylesheet" href="static/css/styles.css" />
     <script src="static/js/config.js" defer></script>
     <script src="static/js/app.js" defer></script>
   </head>
   <body class="participant-page">
-    <div class="page-glow"></div>
+    <div class="page-grid"></div>
     <header class="topbar container">
-      <div class="brand">
-        <div class="brand-mark">NTT</div>
-        <div class="brand-meta">
-          <span class="brand-name">NTT DATA</span>
-          <small>Workshop de Experiência</small>
-        </div>
+      <a class="brand" href="./" aria-label="NTT DATA">
+        <span class="brand-mark">N</span>
+        <span class="brand-meta"><strong>NTT DATA</strong><small>IoT Ideation Buddy</small></span>
+      </a>
+      <div class="topbar-actions">
+        <span class="session-time">8–12 min</span>
+        <a class="ghost-link" href="admin/">Vista de resultados</a>
       </div>
-      <a class="ghost-link" href="admin/">Vista do facilitador</a>
     </header>
 
-    <main class="container shell">
-      <section class="hero-panel">
-        <div class="eyebrow">Sessão de descoberta</div>
-        <h1>Vamos construir a próxima melhor experiência juntos.</h1>
-        <p>
-          Responda em poucos minutos para partilhar contexto, desafios e prioridades da sua equipa.
-        </p>
-      </section>
+    <main class="container app-shell">
+      <aside class="intro-panel">
+        <div class="eyebrow">NTT DATA · IoT IDEATION</div>
+        <h1>Encontre o sinal que pode mudar o seu mundo.</h1>
+        <p class="intro-copy">Uma conversa curta, prática e centrada no mundo físico. No fim, leva consigo um <strong>IoT Radar</strong> com oportunidades para explorar.</p>
+        <div class="intro-note">
+          <span class="note-icon">✦</span>
+          <span>Não precisa de saber a resposta certa. Comece pelo que observa.</span>
+        </div>
+        <div class="chapter-rail" id="chapter-rail" aria-label="Capítulos da conversa"></div>
+      </aside>
 
-      <section class="card flow-card">
-        <div class="flow-header">
+      <section class="card conversation-card" aria-live="polite">
+        <div class="conversation-top">
           <div>
-            <div class="mini-label">Participante</div>
-            <h2>Conversação guiada</h2>
+            <span class="mini-label" id="chapter-kicker">CAPÍTULO 01 · YOU</span>
+            <h2 id="chapter-title">Vamos começar por si.</h2>
           </div>
           <button id="sync-banner" class="status-pill hidden" type="button"></button>
         </div>
-
-        <div class="progress-wrap" aria-label="Progresso do formulário">
-          <div class="progress-bar">
-            <span id="progress-fill"></span>
-          </div>
-          <small id="progress-text">Pergunta 1 de 5</small>
+        <div class="progress-wrap">
+          <div class="progress-labels"><span id="progress-text">01 de 07</span><span id="progress-time">cerca de 10 min</span></div>
+          <div class="progress-bar"><span id="progress-fill"></span></div>
         </div>
-
-        <div id="step-shell" class="step-shell" aria-live="polite"></div>
-
+        <div id="achievement-strip" class="achievement-strip" aria-live="polite"></div>
+        <div id="step-shell" class="step-shell"></div>
         <div class="actions-row">
           <button id="back-btn" class="button secondary" type="button">Voltar</button>
-          <button id="next-btn" class="button primary" type="button">Continuar</button>
+          <button id="next-btn" class="button primary" type="button">Continuar <span aria-hidden="true">→</span></button>
         </div>
       </section>
     </main>

@@ -1,5 +1,5 @@
 window.APP_CONFIG = {
-  appName: 'NTT DATA | Workshop de Experiência',
+  appName: 'NTT DATA | IoT Ideation Buddy',
   locale: 'pt-PT',
   supabase: {
     enabled: false,
